@@ -1,0 +1,183 @@
+.sales-leaders {
+  &__row {
+    display: flex;
+    @media screen and (max-width: $phone-size) {
+      flex-direction: column;
+    }
+
+    & > * {
+      &:not(:last-child) {
+        margin-right: 20px;
+        @media screen and (max-width: $phone-size) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  &__col {
+    flex: 1;
+  }
+}
+
+.sales-leader {
+  background-color: $white;
+  border-radius: 4px;
+  border: 2px solid transparent;
+  display: block;
+  height: 240px;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  transition: all linear .3s;
+
+  @media screen and (max-width: $tablet-size) {
+    padding: 10px;
+    height: 190px;
+  }
+
+  @media screen and (max-width: $phone-size) {
+    display: flex;
+    height: auto;
+
+  }
+
+  &:hover {
+    border-color: $main-action-color;
+  }
+
+  &.sales-leader--big {
+    height: 400px;
+    @media screen and (max-width: $tablet-size) {
+      height: 270px;
+    }
+
+    @media screen and (max-width: $phone-size) {
+      height: auto;
+      display: block;
+    }
+
+    .sales-leader {
+      &__img {
+        height: 280px;
+        @media screen and (max-width: $tablet-size) {
+          height: 160px;
+        }
+
+        @media screen and (max-width: $phone-size) {
+          flex: 1;
+          width: 100%;
+        }
+
+        img {
+          max-height: 280px;
+          @media screen and (max-width: $tablet-size) {
+            max-height: 160px;
+          }
+        }
+      }
+
+      &__name {
+        font-size: 22px;
+        @media screen and (max-width: $tablet-size) {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  &__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 140px;
+    margin-bottom: 10px;
+
+    @media screen and (max-width: $tablet-size) {
+      height: 80px;
+    }
+
+    @media screen and (max-width: $phone-size) {
+      flex: 0 0 40%;
+      width: 40%;
+    }
+
+    img {
+      max-width: 100%;
+      max-height: 140px;
+      @media screen and (max-width: $tablet-size) {
+        max-height: 80px;
+      }
+    }
+  }
+
+  &__name {
+    font-family: $bold-font;
+    line-height: 1.25;
+  }
+}
+
+.sales-leaders-products {
+  background-color: $white;
+  border-radius: 4px;
+  overflow: hidden;
+
+  &__row {
+    display: flex;
+    border-bottom: 1px solid #f2f2f2;
+
+    @media screen and (max-width: $phone-size) {
+      flex-direction: column;
+    }
+
+    &:last-child {
+      border-bottom: 0
+    }
+  }
+
+  &__col {
+    flex: 1;
+    border-right: 1px solid #f2f2f2;
+
+    @media screen and (max-width: $phone-size) {
+      border-right: 0;
+      border-bottom: 1px solid #f2f2f2;
+    }
+
+    &:last-child {
+      border-right: 0;
+      @media screen and (max-width: $phone-size) {
+        border-bottom: 0;
+      }
+    }
+
+    &:first-child {
+      @media screen and (max-width: $tablet-size) {
+        display: none;
+      }
+
+      @media screen and (max-width: $phone-size) {
+        display: block;
+      }
+    }
+
+    &.sales-leaders-products__col {
+      &--wide {
+        flex: 2;
+      }
+    }
+  }
+
+  .product-prev {
+    padding: 20px 0;
+
+    &__footer {
+      opacity: 1;
+      padding: 0 20px;
+      .btn {
+        border-radius: 4px;
+        width: auto;
+      }
+    }
+  }
+}

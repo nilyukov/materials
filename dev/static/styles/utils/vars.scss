@@ -1,6 +1,22 @@
 // Colors
 $white: #ffffff;
 $black: #000000;
+$main-bg-color: #f2f2f2;
+$link-color: #1fa349;
+$link-color-hover: #165f2d;
+$link-color-visited: #605bb2;
+$dark-bg-color: #003333;
+$darkest-bg-color: #002c2c;
+$base-text-color: #333333;
+$text-info-color: #bababa;
+$input-border-color: #ededed;
+$main-action-color: #f8e71c;
+$button-green-color: #1fa349;
+$light-bg-color: #f5f5f5;
+$label-text-color: #999797;
+$warning-color: #ea102b;
+$breadcrumbs-link-hover: #d0021b;
+$slider-dot-bg-color: #dedede;
 
 // Sizes
 $base-font-size: 16px;
@@ -16,6 +32,13 @@ $breakpoints: (
   "desktop-wide": 1440px
 );
 
-$content-size: 1024px;
+$content-size: 1240px;
+$tablet-size: 1239px;
+$phone-size: 767px;
 
 // Fonts
+
+$main-font: 'source_sans_proregular', Arial, sans-serif;
+$boldest-font: 'source_sans_problack', Arial, sans-serif;
+$bold-font: 'source_sans_probold', Arial, sans-serif;
+$semi-bold-font: 'source_sans_prosemibold', Arial, sans-serif;

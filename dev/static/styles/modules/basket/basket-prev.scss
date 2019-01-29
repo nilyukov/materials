@@ -1,0 +1,56 @@
+.basket-prev {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: $white;
+  &__icon {
+    @include size(25px);
+    fill: $white;
+    margin-bottom: 7px;
+    @media screen and (max-width: $tablet-size) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    font-family: $bold-font;
+    line-height: 20px;
+    margin-bottom: 2px;
+    @media screen and (max-width: $tablet-size){
+      display: none;
+    }
+  }
+
+  &__count {
+    font-size: 14px;
+    line-height: 18px;
+    white-space: nowrap;
+    @media screen and (max-width: $tablet-size){
+      display: none;
+    }
+  }
+
+  &__number {
+    @include size(24px);
+    border-radius: 50%;
+    background-color: $main-action-color;
+    color: $base-text-color;
+    line-height: 23px;
+    text-align: center;
+    font-size: 12px;
+    display: none;
+    position: absolute;
+    right: -12px;
+    top: -12px;
+    @media screen and (max-width: $tablet-size) {
+      display: block;
+    }
+    @media screen and (max-width: $phone-size) {
+      @include size(16px);
+      font-size: 10px;
+      top: -8px;
+      right: -8px;
+      line-height: 16px;
+    }
+  }
+}

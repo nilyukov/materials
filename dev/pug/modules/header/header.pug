@@ -1,1 +1,28 @@
 header.header
+    .header-top
+        .container
+            include location
+            include ../navigation/main-nav
+            .user-nav.header-top__user-nav
+                a(href='#').user-nav__link.link-green
+                    | Войти
+    .header-main
+        .container
+            include ../navigation/mobile-nav
+            .logo.header-main__logo
+                img(src='static/images/general/logo.svg').logo__img
+                span.logo__text
+                    | Продажа стройматериалов
+            include ../navigation/catalog-nav
+            .header-actions
+                include search
+                a(href="#").header-phone-mobile.header-main__header-phone-mobile
+                    +icon('phone','header-phone-mobile__icon')
+                .order-callback.header-main__order-callback
+                    span.order-callback__description
+                        | Звоните круглосуточно
+                    a(href='tel: +74993348888').order-callback__phone
+                        | +7 499 334-88-88
+                    a(href='#popup-consultation').order-callback__link.link-white.link-underline.js-popup-link
+                        | Заказать звонок
+                include ../basket/basket-prev

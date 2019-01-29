@@ -1,0 +1,71 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $main-action-color;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  padding: 8px 18px;
+  font-family: $semi-bold-font;
+  line-height: 20px;
+
+  @media screen and (max-width: $tablet-size) {
+    padding: 8px 8px;
+  }
+
+  @media screen and (max-width: $phone-size) {
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  
+  &:hover {
+    background-color: #f0de01;
+  }
+  & > * {
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+  }
+  &__icon {
+    @include size(20px);
+  }
+
+  &.btn {
+    &--fill {
+      width: 100%;
+      justify-content: center;
+    }
+
+    &--disabled {
+      opacity: 0.5;
+    }
+
+    &--bg {
+      &-green {
+        background-color: $button-green-color;
+        color: $white;
+      }
+    }
+
+    &--border {
+      &-green {
+        border-color: $button-green-color;
+        background-color: $white;
+        color: $button-green-color;
+      }
+    }
+
+    &--size {
+      &-s {
+        padding: 3px 15px;
+      }
+
+      &-l {
+        padding: 13px 30px;
+      }
+    }
+
+
+  }
+}

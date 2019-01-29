@@ -1,0 +1,111 @@
+@import "results";
+
+.search {
+  &.search-mobile--active {
+    .search__form,
+    .search__arrow {
+      @media screen and (max-width: $tablet-size){
+        display: block;
+      }
+    }
+  }
+
+  &__arrow {
+    @include size(20px);
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    right: 295px;
+    top: -20px;
+    z-index: 1;
+
+    @media screen and (max-width: $phone-size){
+      right: 95px;
+    }
+
+
+    &:before {
+      content: '';
+      @include size(16px);
+      background-color: $dark-bg-color;
+      border-left: 1px solid $main-action-color;
+      border-top: 1px solid $main-action-color;
+      bottom: -10px;
+      position: absolute;
+      transform: rotate(45deg);
+    }
+  }
+
+  &__form {
+    position: relative;
+    @media screen and (max-width: $tablet-size){
+      background-color: $dark-bg-color;
+      border-top: 1px solid $main-action-color;
+      display: none;
+      left: 0;
+      padding: 10px 20px;
+      position: absolute;
+      right: 0;
+      z-index: 1;
+      top: calc(100% + 20px);
+    }
+
+    @media screen and (max-width: $phone-size){
+      top: calc(100% + 10px);
+    }
+
+    &.search__form--active {
+      .search {
+        &__results {
+          display: block;
+        }
+
+        &__input {
+          border-radius: 4px 4px 0 0;
+        }
+      }
+    }
+  }
+
+  &__line {
+    display: flex;
+    align-items: center;
+
+    & > * {
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &__input {
+    flex: 0 0 220px;
+    width: 220px;
+    @media screen and (max-width: $tablet-size){
+      flex: 1;
+      width: auto;
+    }
+  }
+
+  &__icon {
+    @include size(22px);
+    flex-shrink: 0;
+    fill: $white;
+    @media screen and (max-width: $tablet-size){
+      cursor: pointer;
+    }
+
+    &-mobile {
+      @include size(25px);
+      align-items: center;
+      cursor: pointer;
+      display: none;
+      justify-content: center;
+      flex-shrink: 0;
+      fill: $white;
+      @media screen and (max-width: $tablet-size){
+        display: flex;
+      }
+    }
+  }
+}

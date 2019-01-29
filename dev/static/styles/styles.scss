@@ -6,9 +6,26 @@
 html {
   font-size: $base-font-size;
   height: 100%;
+  &.fixed {
+    height: 100%;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    body {
+      height: 100%;
+      overflow: hidden;
+      position: fixed;
+      width: 100%;
+    }
+  }
 }
 
-body { height: 100%; }
+body {
+  height: 100%;
+  background-color: $main-bg-color;
+  font-family: $main-font;
+  color: $base-text-color;
+}
 
 h1, h2, h3, h4, h5, h6 { margin: 0; }
 
@@ -18,7 +35,10 @@ ul, li {
   padding: 0;
 }
 
-a { text-decoration: none; }
+a {
+  color: $base-text-color;
+  text-decoration: none;
+}
 
 p { margin: 0; }
 
@@ -28,12 +48,27 @@ iframe,
 img,
 svg,
 video,
-textarea { vertical-align: middle; }
+textarea {
+  vertical-align: middle;
+  outline: none;
+}
 
 textarea { resize: none; }
 
-section { position: relative; }
+section {
+  padding: 40px 0;
+  position: relative;
+  @media screen and (max-width: $tablet-size) {
+    padding: 30px 0;
+  }
+}
 
+input[type=text],
+input[type=submit],
+input[type=search],
+textarea {
+  -webkit-appearance: none;
+}
 input,
 select,
 button { outline: none; }
@@ -52,6 +87,10 @@ button { outline: none; }
   margin: 0 auto;
   max-width: $content-size;
   width: 100%;
+  padding: 0 80px;
+  @media screen and (max-width: $tablet-size){
+    padding: 0 20px;
+  }
 }
 
 //Модули

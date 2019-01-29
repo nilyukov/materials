@@ -1,0 +1,37 @@
+.link {
+  color: $base-text-color;
+  font-family: $semi-bold-font;
+  &:hover {
+    color: $link-color-hover;
+  }
+
+  &:visited {
+    color: $link-color-visited;
+  }
+
+  &-white {
+    color: $white;
+    font-family: $semi-bold-font;
+  }
+
+  &-green {
+    color: $link-color;
+    font-family: $semi-bold-font;
+
+    &:hover {
+      color: $link-color-hover;
+    }
+  }
+
+  &-yellow {
+    color: $main-action-color;
+    font-family: $semi-bold-font;
+
+  }
+
+
+
+  &-underline {
+    text-decoration: underline;
+  }
+}

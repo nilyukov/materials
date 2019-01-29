@@ -1,0 +1,139 @@
+extends template/main
+
+block variables
+    - var title = 'Страница подкатегории'
+    - var pageClass = 'sub-category-page'
+
+block content
+    section.s-breadcrumbs
+        .container
+            ul.breadcrumbs
+                li.breadcrumbs__item
+                    a(href='#').breadcrumbs__home
+                        +icon('home','breadcrumbs__icon')
+                li.breadcrumbs__item
+                    a(href='#').breadcrumbs__link
+                        | Каталог металлопродукции
+                    .breadcrumbs-tooltip
+                        .breadcrumbs-tooltip__text
+                            | Материалы для мягкой кровли и металлочерепицы в Нижнем Новгороде
+                li.breadcrumbs__item
+                    span.breadcrumbs__current
+                        | Доборные элементы кровли
+    section.s-sub-category
+        .container
+            .section-header
+                h1.title-page
+                    | Доборные элементы кровли
+                    span.count-text
+                        | 2341
+            .sub-category
+                aside.sub-category__aside
+                    include pages/sub-category/category-list
+                    include pages/sub-category/filter
+                main.sub-category__main
+                    include pages/sub-category/tags
+                    .sub-category__status
+                        include pages/sub-category/sort
+                        .page-counter
+                            span.page-counter__text
+                                | Страница
+                            span.page-counter__number
+                                | <b>1</b> из 7
+                    .sub-category__products
+                        include modules/products/prev-counter/prev-1
+                        include modules/products/prev-counter/prev-2
+                        include modules/products/prev-counter/prev-3
+                        include modules/products/prev-counter/prev-4
+                        include modules/products/prev-counter/prev-2
+                        include modules/products/prev-counter/prev-1
+                        include modules/products/prev-counter/prev-2
+                        include modules/products/prev-counter/prev-2
+                        include modules/products/prev-counter/prev-3
+                    .pagination
+                        ul.pagination__list
+                            each page in [1,2,3,4,5,'...']
+                                li.pagination__item
+                                    a(href="#").pagination__link= page
+                            li.pagination__item.pagination__item--plus
+                                a(href="#").pagination__link
+                                    | +
+    section.s-often-looking
+        .container
+            .section-header
+                h3.title-section.title-section--small
+                    | Часто ищут доборные элементы кровли
+            .often-looking
+                .category-list__wrapper
+                    a(href='#').category-list__title
+                        span.category-list__title-text
+                            | По материалу
+                    ul.category-list
+                        li.category-list__item
+                            a(href="#").link
+                                | Доборные элементы кровли из оцинкованной стали
+                            span.count-text
+                                | 23
+                        li.category-list__item
+                            a(href="#").link
+                                | Доборные элементы кровли из неоцинкованной х/к стали
+                            span.count-text
+                                | 98
+                .category-list__wrapper
+                    a(href='#').category-list__title
+                        span.category-list__title-text
+                            | По цвету
+                    ul.category-list
+                        li.category-list__item
+                            a(href="#").link
+                                | Доборные элементы кровли зеленого цвета
+                            span.count-text
+                                | 23
+                        li.category-list__item
+                            a(href="#").link
+                                | Доборные элементы кровли красного цвета
+                            span.count-text
+                                | 98
+                        li.category-list__item
+                            a(href="#").link
+                                | Доборные элементы кровли черного цвета
+                            span.count-text
+                                | 98
+                        li.category-list__item
+                            a(href="#").link
+                                | Доборные элементы кровли белого цвета
+                            span.count-text
+                                | 98
+                .category-list__wrapper
+                    a(href='#').category-list__title
+                        span.category-list__title-text
+                            | По толщине металла
+                    ul.category-list
+                        li.category-list__item
+                            a(href="#").link
+                                | Доборные элементы кровли толщиной 0,4 мм
+                            span.count-text
+                                | 23
+                        li.category-list__item
+                            a(href="#").link
+                                | Доборные элементы кровли толщиной 0,5 мм
+                            span.count-text
+                                | 98
+                        li.category-list__item
+                            a(href="#").link
+                                | Доборные элементы кровли толщиной 0,6 мм
+                            span.count-text
+                                | 98
+                        li.category-list__item
+                            a(href="#").link
+                                | Доборные элементы кровли толщиной 0,7 мм
+                            span.count-text
+                                | 98
+                        li.category-list__item
+                            a(href="#").link
+                                | Доборные элементы кровли толщиной 0,8 мм
+                            span.count-text
+                                | 7
+
+    include modules/products/you-see
+    include modules/questions

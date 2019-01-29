@@ -1,1 +1,133 @@
+mixin footerNavLink(link, text, descr)
+    li.footer-nav__item
+        a(href=link).footer-nav__link=text
+        if(descr)
+            span.footer-nav__descr=descr
+
 footer.footer
+    .footer-top
+        .container
+            .footer-callback
+                +icon('qr-code', 'footer-callback__icon')
+                .order-callback.footer-callback__order-callback
+                    span.order-callback__description
+                        |   Звоните круглосуточно
+                    a(href='tel: +74993348888').order-callback__phone
+                        |   +7 499 334-88-88
+                    a(href='#').order-callback__link.link-white.link-underline
+                        |   Заказать звонок
+            .footer-main
+                .footer-nav
+                    .footer__col
+                        span.footer__title
+                            |   О нас
+                        ul.footer-nav__list
+                            +footerNavLink('#','Оплата и доставка', '')
+                            +footerNavLink('#','Гарантия', '')
+                            +footerNavLink('#','Услуги по обработке металла', '')
+                            +footerNavLink('#','Компания', '')
+                            +footerNavLink('#','Контакты', 'связь с директором')
+                    .footer__col
+                        span.footer__title
+                            |   Каталог
+                        ul.footer-nav__list
+                            +footerNavLink('#','Все для кровли', '')
+                            +footerNavLink('#','Фасад', '')
+                            +footerNavLink('#','Профнастил', '')
+                            +footerNavLink('#','Листовой прокат', '')
+                            +footerNavLink('#','Рулонная сталь', '')
+                .footer__col
+                    .footer__block
+                        span.footer__title
+                            |   Принимаем к оплате
+                        .payment-types
+                            ul.payment-types__list
+                                li.payment-types__item
+                                    img(src="static/images/general/visa.svg" alt="Логотип").payment-types__logo
+                                li.payment-types__item
+                                    img(src="static/images/general/master.svg" alt="Логотип").payment-types__logo
+                                li.payment-types__item
+                                    img(src="static/images/general/maestro.svg" alt="Логотип").payment-types__logo
+                            a(href="#").link-underline.link-yellow
+                                |   Оплата заказа онлайн
+                    .footer__block
+                        .footer-action
+                            span.footer-action__title
+                                | Акции и спецпредложения
+                            .action-tooltip
+                                +icon('gift','action-tooltip__icon')
+                                span.action-tooltip__text
+                                    | Мультиварка в подарок до 31 декабря!
+                .footer__col
+                    .footer__block
+                        span.footer__title
+                            |   Контакты
+                        .footer-contacts
+                            +icon('location', 'footer-contacts__icon')
+                            span.footer-contacts__title
+                                |   Офис
+                            .footer-contacts__text 111033, Москва, ул.Золоторожский вал, д. 11, стр. 9
+                                .contacts-popup
+                                    span.contacts-popup__toggle на карте
+                                    .contacts-popup__body-wrapper
+                                        .contacts-popup__body
+                                            .contacts-popup__map#popup-contacts-office
+                                            .contacts-popup__info
+                                                .contacts-popup__close
+                                                    +icon('close', 'contacts-popup__close-icon')
+                                                span.contacts-popup__title
+                                                    | Центральныйо офис в Москве
+                                                span.contacts-popup__text
+                                                    | 111022, Москва, ул. Золорожский вал, д. 11, стр. 9
+                                                .contacts-popup__block
+                                                    span.contacts-popup__label
+                                                        | Время работы:
+                                                    span.contacts-popup__text
+                                                        | пн-пт 9:00-18:00
+                                                .contacts-popup__qr
+                                                    span.contacts-popup__text
+                                                        | Для построения маршрута наведите камеру телефона на QR-код
+                                                    img(src="static/images/general/qr-code.svg" alt="QR-код").contacts-popup__qr-img
+                    .footer__block
+                        .footer-contacts
+                            +icon('location', 'footer-contacts__icon')
+                            span.footer-contacts__title
+                                |   Производство и склад
+                            .footer-contacts__text
+                                | Московская обл., Ленинский р-й, г. Видное, Северная видновская промзона, ФГУП «Комплекс»
+                                .contacts-popup
+                                    span.contacts-popup__toggle на карте
+                                    .contacts-popup__body-wrapper
+                                        .contacts-popup__body
+                                            .contacts-popup__map#popup-contacts-stock
+                                            .contacts-popup__info
+                                                .contacts-popup__close
+                                                    +icon('close', 'contacts-popup__close-icon')
+                                                span.contacts-popup__title
+                                                    | Центральныйо офис в Москве
+                                                span.contacts-popup__text
+                                                    | 111022, Москва, ул. Золорожский вал, д. 11, стр. 9
+                                                .contacts-popup__block
+                                                    span.contacts-popup__label
+                                                        | Время работы:
+                                                    span.contacts-popup__text
+                                                        | пн-пт 9:00-18:00
+                                                .contacts-popup__qr
+                                                    span.contacts-popup__text
+                                                        | Для построения маршрута наведите камеру телефона на QR-код
+                                                    img(src="static/images/general/qr-code.svg" alt="QR-код").contacts-popup__qr-img
+
+    .footer-bottom
+        .container
+            .footer-bottom__line
+                span.copyright
+                    | &#xa9; 2018 Завод «Венёвский»
+                a(href="#").footer-bottom__link.footer-bottom__link--mobile-2
+                    | Политика конфиденциальности
+                a(href="#").footer-bottom__link.footer-bottom__link--mobile-1
+                    | Карта сайта
+            .footer-bottom__line
+                p.footer-bottom__text
+                    | Сайт venev.ru носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями ГК РФ.
+                p.footer-bottom__text
+                    | Для получения подробной информации о наличии, видах, характеристиках и стоимости материалов, пожалуйста, обращайтесь в офисы продаж.

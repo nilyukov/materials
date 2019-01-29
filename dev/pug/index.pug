@@ -1,7 +1,17 @@
 extends template/main
 
 block variables
-	- var title = 'Главная страница'
-	- var pageClass = 'index-page'
+    - var title = 'Главная страница'
+    - var pageClass = 'index-page'
 
 block content
+    include pages/index/banner
+    include pages/index/popular-categories
+    include pages/index/advantages
+    include pages/index/action
+    include pages/index/discount
+    include modules/sales-leaders
+    include modules/products/you-see
+    include modules/questions
+    block script
+        script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")

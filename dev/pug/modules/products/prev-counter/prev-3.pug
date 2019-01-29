@@ -1,0 +1,43 @@
+.product-prev
+    a(href='#').product-prev__header
+        .product-prev__marks
+            .product-prev__mark.product-prev__mark--bg-yellow
+                | -30%
+            .product-prev__mark.product-prev__mark--bg-green
+                | Хит
+        img(src='static/images/content/products/prev-1.png' alt='Preview product').product-prev__img
+    .product-prev__body
+        a(href='#').product-prev__title
+            span.product-prev__name
+                | Планка стыковочная 30х30х2000 мм, толщина 0,4 мм, цвет графитовый серый RAL 7024
+            span.count-text
+                | 10 шт.
+        .product-prev__info-wrapper
+            .product-prev__info
+                span.product-prev__info-label
+                    | Артикул
+                span.product-prev__info-value
+                    | 13763515
+            .product-prev__info.product-prev__info--wide
+                span.product-prev__info-label
+                    | Срок изготовления
+                span.product-prev__info-value
+                    | от 2 до 5 дней
+        .product-prev__price
+            span.product-prev__price-old
+                | 80 руб.
+            span.product-prev__price-current
+                | 76 руб. за шт.
+    .product-prev__footer
+        .counter.product-prev__counter
+            .counter__btn.counter__btn--minus
+                +icon('minus','counter__icon')
+            .counter__current
+                span.counter__current-text 1
+                span.counter__current-descr шт.
+            .counter__btn.counter__btn--plus
+                +icon('plus','counter__icon')
+        button.btn.btn--fill
+            +icon('cart', 'btn__icon')
+            span
+                | В корзину

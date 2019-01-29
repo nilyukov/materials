@@ -1,0 +1,49 @@
+.s {
+  &-bg-white {
+    background-color: $white;
+  }
+
+  &-categories-prev {
+    padding-bottom: 10px;
+  }
+
+  &-sales-leaders {
+    padding-bottom: 20px;
+  }
+
+  &-questions {
+    padding: 10px 0;
+  }
+
+  &-often-looking {
+    .container {
+      padding-left: 355px;
+      @media screen and (max-width: $tablet-size) {
+        padding-left: 20px;
+      }
+    }
+  }
+}
+
+.section-mobile-footer {
+  display: none;
+  align-items: center;
+  margin-top: 20px;
+  @media screen and (max-width: $phone-size) {
+    display: block;
+    text-align: center;
+  }
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  &__right {
+    margin-left: auto;
+    @media screen and (max-width: $phone-size) {
+      display: none;
+    }
+  }
+}

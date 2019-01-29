@@ -1,0 +1,20 @@
+@import "category-prev";
+@import "sub-category";
+
+.often-looking {
+  display: flex;
+  border-radius: 4px;
+  overflow: hidden;
+
+
+  & > * {
+    border-right: 1px solid #f2f2f2;
+    flex: 1;
+    &:last-child {
+      border-right: 0;
+    }
+  }
+  .category-list__wrapper {
+    margin-bottom: 0;
+  }
+}

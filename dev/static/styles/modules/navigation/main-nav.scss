@@ -1,0 +1,19 @@
+.main-nav {
+  &__list {
+    display: flex;
+    & > * {
+      &:not(:last-child) {
+        margin-right: 40px;
+        @media screen and (max-width: $tablet-size){
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+
+  &__item {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.65px;
+  }
+}

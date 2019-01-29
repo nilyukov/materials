@@ -1,0 +1,295 @@
+@import "location";
+@import "banner";
+@import "section";
+@import "sales-leaders";
+@import "links";
+@import "review-line";
+@import "breadcrumbs";
+@import "pages";
+@import "tag";
+@import "sort";
+@import "pagination";
+@import "color";
+
+.logo {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.order-callback {
+  display: flex;
+  flex-direction: column;
+
+  &__description {
+    font-size: 12px;
+  }
+  &__phone {
+    color: $main-action-color;
+    font-family: $boldest-font;
+    font-size: 24px;
+    line-height: 1.5;
+    white-space: nowrap;
+  }
+
+  &__link {
+    font-size: 14px;
+  }
+}
+
+.title {
+  &-page {
+    font-size: 40px;
+    font-family: $semi-bold-font;
+    line-height: 1.25;
+
+    @media screen and (max-width: $phone-size) {
+      font-size: 30px;
+    }
+
+    .count-text {
+      font-size: 30px;
+    }
+  }
+  &-section {
+    font-size: 40px;
+    font-family: $semi-bold-font;
+    line-height: 1.25;
+    @media screen and (max-width: $phone-size) {
+      font-size: 30px;
+    }
+    &--small {
+      font-size: 30px;
+    }
+  }
+}
+
+.count-text {
+  font-size: 14px;
+  color: $text-info-color;
+  margin-left: 5px;
+}
+
+.slider-nav {
+  cursor: pointer;
+  opacity: .5;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all linear .3s;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &.slider-nav {
+    &--prev {
+      left: -55px;
+      @media screen and (max-width: $phone-size) {
+        left: -15px;
+      }
+    }
+
+    &--next {
+      right: -55px;
+      @media screen and (max-width: $phone-size) {
+        right: -15px;
+      }
+    }
+  }
+
+  &.slick-disabled {
+    cursor: default;
+
+    &:hover {
+      opacity: .5;
+    }
+  }
+
+  &__icon {
+    @include size(30px);
+    fill: $base-text-color;
+
+  }
+}
+
+.slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+
+  & > * {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+  .slick-active {
+    button {
+      background-color: $main-action-color;
+    }
+  }
+  button {
+    @include size(10px);
+    background-color: $slider-dot-bg-color;
+    text-indent: -99999px;
+    display: block;
+    cursor: pointer;
+    padding: 0;
+    border: 0;
+    border-radius: 2px;
+  }
+}
+
+.upgrade {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  & > * {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  &__icon {
+    @include size(16px);
+    fill: $text-info-color;
+  }
+}
+
+.questions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @media screen and (max-width: $phone-size) {
+    flex-direction: column;
+  }
+
+  & > * {
+    @media screen and (max-width: $phone-size) {
+      margin: 10px 0;
+      &:first-child {
+        margin-top: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.ask-your-question {
+  display: flex;
+  align-items: center;
+  & > * {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    & > * {
+      &:not(:last-child) {
+        margin-right: 20px;
+        @media screen and (max-width: $phone-size) {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    & > * {
+      &:not(:last-child) {
+        margin-right: 10px;
+        @media screen and (max-width: $tablet-size) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  &__icon {
+    @include size(24px);
+    fill: $base-text-color;
+  }
+
+  &__text {
+    @media screen and (max-width: $tablet-size) {
+      display: none;
+    }
+  }
+}
+
+.cancel__icon {
+  fill: $white;
+}
+
+.page-counter {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  font-size: 14px;
+  @media screen and (max-width: $tablet-size) {
+    padding: 15px;
+  }
+
+  & > * {
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+  }
+
+  &__text {
+    @media screen and (max-width: $tablet-size) {
+      display: none;
+    }
+  }
+}
+
+.counter {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid $input-border-color;
+  border-radius: 4px;
+  background-color: $white;
+
+  &__btn {
+    @include size(40px);
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #fafafa;
+  }
+
+  &__icon {
+    @include size(15px);
+    fill: #bababa;
+  }
+
+  &__current {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 40px;
+    flex: 0 0 90px;
+    width: 90px;
+    padding: 0 10px;
+    @media screen and (max-width: $tablet-size) {
+      flex: 0 0 65px;
+      width: 65px;
+    }
+
+    & > * {
+      &:not(:last-child) {
+        margin-right: 5px;
+      }
+    }
+  }
+}

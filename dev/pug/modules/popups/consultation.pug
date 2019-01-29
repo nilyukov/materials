@@ -1,0 +1,95 @@
+.popup.mfp-hide#popup-consultation
+    .hide-on-success
+        .popup__header
+            span.popup__title
+                | Получить консультацию
+            .popup__close
+                +icon('close', 'popup__close-icon')
+        .popup__body
+            form.form
+                .form__body
+                    .form-line
+                        .form-group.form-group--width-m.form-group--required
+                            label.form-group__label
+                                | Контактный телефон
+                            input(name='phone' type='tel' placeholder='+7(912) 123-45-67').input-field.phone-mask
+                    .form-line
+                        .form-group
+                            label.form-group__label
+                                | Вопрос или комментарий
+                            textarea(placeholder='Здравствуйте, меня интересует...').textarea-field
+                    .form-line
+                        .form-group
+                            label.file-upload
+                                input(type="file")
+                                .file-upload__custom
+                                    +icon('upload', 'file-upload__icon')
+                                    span.file-upload__text
+                                        | Прикрепить файл
+                .form__footer
+                    .form-line
+                        .form-group.form-group--width-m
+                            input(type='submit' value='Получить консультацию').btn.btn--size-l
+                        span.form-line__info.form-line__info--color-green
+                            | Ответим в течение 10 минут
+                    .form-line
+                        p.form-info
+                            | Задавая вопрос, вы соглашаетесь с <a href='#' class='form-info__link'>политикой конфиденциальности</a>
+    .show-on-success
+        .popup__header
+            span.popup__title
+                | Мы вам перезвоним
+            .popup__close
+                +icon('close', 'popup__close-icon')
+        .popup__body
+            .form-success
+                .form-success__block
+                    .form-success__info
+                        span.form-success__text
+                            | Номер вашей заявки
+                        span.form-success__number
+                            |  1234
+                    p.form-success__description
+                        | Менеджер позвонит на указанный телефон сегодня <b>до 14:43</b> по московскому времени.
+                .form-success__block
+                    span.popup__subtitle
+                        | Не готовы ждать?
+                    .form-success__row
+                        .form-success__col
+                            .form-success-contacts
+                                +icon('phone', 'form-success-contacts__icon')
+                                span.form-success-contacts__text
+                                    | Звоните круглосуточно
+                                a(href="tel:+71234567888").link-green
+                                    | +7 123 456-78-88
+                                a(href="#").link-underline.form-success-contacts__link
+                                    | Набрать номер по QR-коду
+                        .form-success__col
+                            .form-success-contacts
+                                +icon('mail', 'form-success-contacts__icon')
+                                span.form-success-contacts__text
+                                    | Напишите нам email
+                                a(href="mailto:question@venevsky.ru").link-green
+                                    | question@venevsky.ru
+            form.form.fast-review-form
+                span.popup__subtitle
+                    | Насколько быстро вы нашли нужный товар?
+                .review-line__wrapper
+                    .review-line
+                    .review-line__inner
+                        .review-line__item.review-line__item--active.review-line__item--descr-left(data-fast-review="очень долго")
+                            span.review-line__number 1
+                        .review-line__item.review-line__item--descr-left(data-fast-review="долго")
+                            span.review-line__number 2
+                        .review-line__item.review-line__item--descr-center(data-fast-review="нормально")
+                            span.review-line__number 3
+                        .review-line__item.review-line__item--descr-right(data-fast-review="быстро")
+                            span.review-line__number 4
+                        .review-line__item.review-line__item--descr-right(data-fast-review="очень быстро")
+                            span.review-line__number 5
+                .fast-review-form__line
+                    .form-group.form-group--width-l
+                        input(placeholder='Комментарий (необязательно)').input-field
+                    input(type='submit' value='Отправить').btn.btn--size-l
+
+

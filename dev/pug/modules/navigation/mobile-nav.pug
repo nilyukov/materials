@@ -1,0 +1,74 @@
+.mobile-nav__wrapper
+    .sandwich__wrapper
+        .sandwich
+            .sandwich__line.sandwich__line--top
+            .sandwich__line.sandwich__line--middle
+            .sandwich__line.sandwich__line--bottom
+
+    .mobile-nav__content
+        .mobile-nav__main
+            ul.mobile-nav__list
+                li.mobile-nav__item
+                    a(href='#').mobile-nav__link
+                        | Оплата и доставка
+                li.mobile-nav__item
+                    a(href='#').mobile-nav__link
+                        | Гарантия
+                li.mobile-nav__item
+                    a(href='#').mobile-nav__link
+                        | Услуги
+                li.mobile-nav__item
+                    a(href='#').mobile-nav__link
+                        | Компания
+                li.mobile-nav__item
+                    a(href='#').mobile-nav__link
+                        | Контакты
+            ul.mobile-user-nav__list
+                li.mobile-user-nav__item
+                    a(href="#").mobile-user-nav__link
+                        | Войти
+            .location-mobile
+                .location__header
+                    +icon('location', 'location__icon')
+                    span.location__current
+                        | Нижний Новгород
+                .location__body
+                    .location-question
+                        span.location-question__text
+                            | Ваш регион доставки Нижний Новгород?
+                        .location-question__buttons
+                            .btn.btn--bg-green.btn--size-s.location-question__btn(data-location="yes")
+                                | Да, верно
+                            .btn.btn--border-green.btn--size-s.location-question__btn(data-location="no")
+                                | Нет, уточнить регион
+                    .location-choose
+                        .location-choose__close
+                            +icon('close','location-choose__close-icon')
+                        .location-choose__header
+                            input(placeholder='Поиск по городу или индексу').input-field.input-field--size-s
+                        .location-choose__body
+                            ul.location-choose__list
+                                li.location-choose__item
+                                    | Москва
+                                li.location-choose__item
+                                    | Санкт-Петербург
+                                li.location-choose__item
+                                    | Екатеринбург
+                                li.location-choose__item
+                                    | Нижний Новгород
+                                li.location-choose__item
+                                    | Пермь
+                                li.location-choose__item
+                                    | Казань
+                                li.location-choose__item
+                                    | Новосибирск
+                                li.location-choose__item
+                                    | Челябинск
+        .mobile-nav__callback
+            .order-callback.mobile-nav__order-callback
+                span.order-callback__description
+                    | Звоните круглосуточно
+                a(href='tel: +74993348888').order-callback__phone
+                    | +7 499 334-88-88
+                a(href='#').order-callback__link.link-white.link-underline
+                    | Заказать звонок

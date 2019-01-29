@@ -1,0 +1,57 @@
+.search.header-main__search
+    .search__icon-mobile
+        +icon('search', 'search__icon')
+    .search__form
+        .search__arrow
+        .search__line
+            input(type='search' placeholder='Артикул или название товара').input-field.input-field--size-s.search__input
+            +icon('search','search__icon')
+        .search__results
+            a(href='#').search-item
+                span.search__title
+                    | Весь каталог
+                .search-item__body
+                    span.search-item__name
+                        | Планка стыковочная
+                    span.search-item__count
+                        | 31 результат
+            a(href='#').search-item
+                span.search__title
+                    | Доборные элементы кровли
+                .search-item__body
+                    span.search-item__name
+                        | Планка стыковочная
+                    span.search-item__count
+                        | 22 результата
+            a(href='#').search-item
+                span.search__title
+                    | Доборные элементы кровли
+                .search-item__body
+                    span.search-item__name
+                        | Планка стыковочная
+                    span.search-item__count
+                        | 121 результат
+            .search-goods
+                span.search__title
+                    | Товары
+                ul.search-goods__list
+                    each val in [1,2,3,4]
+                        li.search-good
+                            a(href='#').search-good__link
+                                .search-good__img-wrapper
+                                    img(src='static/images/content/products/prev-1.png' alt='Фото товара').search-good__img
+                                .search-good__body
+                                    .search-good__line
+                                        span.search-good__name
+                                            | Планка стыковочная
+                                        span.search-good__descr
+                                            | 30х20х3000 мм, толщина 0.4мм
+                                    .search-good__line
+                                        span.search-good__price
+                                            | 356 руб за шт.
+
+            .search-all
+                span.search-all__text
+                    | Показать все результаты
+                span.search-all__count
+                    | 764

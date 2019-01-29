@@ -1,0 +1,71 @@
+.popup.mfp-hide#popup-upgrade
+    .hide-on-success
+        .popup__header
+            span.popup__title
+                | Что можно улучшить на этой страницу?
+            .popup__close
+                +icon('close', 'popup__close-icon')
+        .popup__body
+            form.form
+                .form__body
+                    .form-line
+                        .form-group.form-group--required
+                            label.form-group__label
+                                | Вопрос или комментарий
+                            textarea(name="req-textarea" placeholder='Здравствуйте, на этой странице можно...').textarea-field
+                    .form-line
+                        .form-group.form-group--width-m
+                            label.form-group__label
+                                | Электронная почта
+                            input(name='email' type='email' placeholder='Введите свой email').input-field
+                        span.form-line__info.form-line__info--size-s
+                            | Мы быстрее исправим ошибку, если сможем связаться с вами для уточнения информации
+                    .form-line
+                        .form-group.form-group--width-m.form-group--required
+                            label.form-group__label
+                                | Контактный телефон
+                            input(name='phone' type='tel' placeholder='+7(912)123-45-67').input-field.phone-mask
+                .form__footer
+                    .form-line
+                        .form-group.form-group--width-m
+                            input(type='submit' value='Предложить улучшение').btn.btn--size-l.btn--fill
+
+                    .form-line
+                        p.form-info
+                            | Задавая вопрос, вы соглашаетесь с <a href='#' class='form-info__link'>политикой конфиденциальности</a>
+    .show-on-success
+        .popup__header
+            span.popup__title
+                | Что можно улучшить на этой странице?
+            .popup__close
+                +icon('close', 'popup__close-icon')
+        .popup__body
+            .form-success
+                .form-success__block
+                    .form-success__info
+                        span.form-success__text
+                            | Номер вашей заявки
+                        span.form-success__number
+                            |  1234
+                    p.form-success__description
+                        | Менеджер позвонит на указанный телефон сегодня <b>до 14:43</b> по московскому времени.
+                .form-success__block
+                    span.popup__subtitle
+                        | Хотите поговорить с нами голосом?
+                    .form-success__row
+                        .form-success__col
+                            .form-success-contacts
+                                +icon('phone', 'form-success-contacts__icon')
+                                span.form-success-contacts__text
+                                    | Звоните круглосуточно
+                                a(href="tel:+71234567888").link-green
+                                    | +7 123 456-78-88
+                                a(href="#").link-underline.form-success-contacts__link
+                                    | Набрать номер по QR-коду
+                        .form-success__col
+                            .form-success-contacts
+                                +icon('mail', 'form-success-contacts__icon')
+                                span.form-success-contacts__text
+                                    | Напишите нам email
+                                a(href="mailto:question@venevsky.ru").link-green
+                                    | question@venevsky.ru

@@ -1,0 +1,33 @@
+.catalog-page {
+  .s-categories-prev {
+    @media screen and (max-width: $phone-size) {
+      padding-bottom: 0;
+    }
+  }
+
+  .categories-prev {
+    @media screen and (max-width: $phone-size) {
+      display: none;
+    }
+  }
+}
+
+.categories-page {
+  .s-categories {
+    @media screen and (max-width: $phone-size) {
+      padding-bottom: 0;
+    }
+  }
+
+  .categories {
+    @media screen and (max-width: $phone-size) {
+      display: none;
+    }
+  }
+
+  .s-categories-prev {
+    @media screen and (max-width: $phone-size) {
+      display: none;
+    }
+  }
+}

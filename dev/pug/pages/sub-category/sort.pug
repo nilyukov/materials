@@ -1,0 +1,33 @@
+mixin sortItem(title, descr)
+    .sort-action__item
+        span.sort-action__name=title
+        if(descr)
+            span.sort-action__description=descr
+
+.sort
+    .sort-item
+        span.sort-item__title
+            | Упорядочить
+        .sort-action
+            .sort-action__header
+                span.sort-action__current
+                    | по популярности
+            .sort-action__body
+                +sortItem('По цене',' по возрастанию')
+                +sortItem('По цене',' по убыванию')
+                +sortItem('По названию','А → Я')
+                +sortItem('По названию','Я → А')
+                +sortItem('По популярности')
+
+    .sort-item
+        span.sort-item__title
+            | Показывать по
+        .sort-action
+            .sort-action__header
+                span.sort-action__current
+                    | 30
+            .sort-action__body
+                +sortItem('10')
+                +sortItem('20')
+                +sortItem('30')
+                +sortItem('40')

@@ -1,0 +1,76 @@
+extends template/main
+
+block variables
+    - var title = 'Страница каталога'
+    - var pageClass = 'catalog-page'
+
+block content
+    section.s-breadcrumbs
+        .container
+            ul.breadcrumbs
+                li.breadcrumbs__item
+                    a(href='#').breadcrumbs__home
+                        +icon('home','breadcrumbs__icon')
+                li.breadcrumbs__item
+                    a(href='#').breadcrumbs__label.breadcrumbs-nav__toggle
+                        | Каталог
+                    ul.breadcrumbs-nav
+                        li.breadcrumbs-nav__item
+                            a(href='#').breadcrumbs-nav__link
+                                span.breadcrumbs-nav__text Рулонная сталь
+                                span.count-text 23
+                        li.breadcrumbs-nav__item
+                            a(href='#').breadcrumbs-nav__link
+                                span.breadcrumbs-nav__text Профнастил
+                                span.count-text 23
+                        li.breadcrumbs-nav__item
+                            a(href='#').breadcrumbs-nav__link
+                                span.breadcrumbs-nav__text Листовой прокат
+                                span.count-text 23
+                        li.breadcrumbs-nav__item
+                            a(href='#').breadcrumbs-nav__link
+                                span.breadcrumbs-nav__text Фасад
+                                span.count-text 23
+                        li.breadcrumbs-nav__item
+                            a(href='#').breadcrumbs-nav__link
+                                span.breadcrumbs-nav__text Распродажа
+                                span.count-text 23
+                        li.breadcrumbs-nav__item
+                            a(href='#').breadcrumbs-nav__link
+                                span.breadcrumbs-nav__text Специальные предложения
+                                span.count-text 23
+                li.breadcrumbs__item
+                    a(href='#').breadcrumbs__link
+                        | Каталог металлопродукции
+                    .breadcrumbs-tooltip
+                        .breadcrumbs-tooltip__text
+                            | Материалы для мягкой кровли и металлочерепицы в Нижнем Новгороде
+                li.breadcrumbs__item
+                    span.breadcrumbs__current
+                        | Материалы для мягкой кровли и металлочерепицы
+
+
+    section.s-categories-prev
+        .container
+            .section-header
+                h1.title-page
+                    | Каталог стройматериалов
+            .categories-prev
+                .categories-prev__navigation
+                    .slider-nav.slider-nav--prev.categories-prev__btn--prev
+                        +icon('left-chevron', 'slider-nav__icon')
+                    .slider-nav.slider-nav--next.categories-prev__btn--next
+                        +icon('right-chevron', 'slider-nav__icon')
+                .js-categories-prev
+                    include modules/category/prev-1
+                    include modules/category/prev-2
+                    include modules/category/prev-3
+                    include modules/category/prev-4
+                    include modules/category/prev-5
+                    include modules/category/prev-6
+    include pages/catalog/catalog-mobile-nav
+    include modules/sales-leaders
+    include modules/products/you-see
+    include modules/questions
+    block script
+        script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")

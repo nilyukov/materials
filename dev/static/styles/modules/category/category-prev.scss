@@ -1,0 +1,127 @@
+.js-categories-prev {
+  display: flex;
+  flex-wrap: wrap;
+  @media screen and (max-width: $phone-size) {
+    display: block;
+  }
+
+  & > * {
+    width: calc(25% - 15px);
+    margin-right: 20px;
+    margin-bottom: 30px;
+
+    @media screen and (max-width: $tablet-size) {
+      width: calc(((100% / 3) - (50px / 3)) - 1px);
+      margin-right: 25px;
+      margin-bottom: 25px;
+    }
+
+    @media screen and (max-width: $phone-size) {
+      max-width: 100%;
+      width: 100%;
+      flex: 1;
+    }
+
+    &:nth-child(4n+4) {
+      margin-right: 0;
+      @media screen and (max-width: $tablet-size) {
+        margin-right: 25px;
+      }
+
+      @media screen and (max-width: $phone-size) {
+        margin-right: 0;
+      }
+    }
+
+    &:nth-child(3n+3) {
+      @media screen and (max-width: $tablet-size) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.categories-prev {
+  position: relative;
+
+  &__navigation {
+    display: none;
+    @media screen and (max-width: $phone-size) {
+      display: block;
+    }
+  }
+}
+
+.category-prev {
+  background-color: $white;
+  border-radius: 3px;
+  overflow: hidden;
+
+  @media screen and (max-width: $phone-size) {
+    margin: 0 20px;
+  }
+
+  &.category-prev--tablet-hide {
+    @media (min-width: $phone-size) and (max-width: $tablet-size) {
+      display: none;
+    }
+  }
+
+  &__img {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 180px;
+  }
+}
+
+.category-list {
+  &__wrapper {
+    background-color: $white;
+    padding: 20px 15px;
+    border-radius: 4px;
+    break-inside: avoid;
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+
+
+
+    &-text {
+      font-size: 22px;
+      font-family: $bold-font;
+    }
+  }
+
+  &__item {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-family: $semi-bold-font;
+    &:last-child {
+      margin-bottom: 0;
+      margin-top: 20px;
+    }
+  }
+}
+
+.categories {
+  columns: 4;
+  column-gap: 20px;
+  
+  @media screen and (max-width: $tablet-size) {
+    columns: 3;
+  }
+}
+
+.category-item{
+  background-color: $white;
+  border-radius: 4px;
+  break-inside: avoid;
+  padding: 20px 15px;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,107 @@
+mixin checkboxLine(text, count, color)
+    li.filter-list__item
+        label.checkbox
+            input(type="checkbox").checkbox__input
+            span.checkbox__custom
+            .checkbox__body
+                if(color)
+                    span.checkbox__text=text
+                    .color-block(style="background-color: " + color + "")
+                else
+                    span.checkbox__text=text
+        span.count-text=count
+
+
+.filter
+    .filter__header
+        span.filter__title
+            | Фильтр
+    .filter__body
+        .filter-tooltip
+            span.filter-tooltip__text
+                | Найдено <b>456 товаров</b>
+            span.filter-tooltip__btn
+                | Показать
+        .filter-item
+            .filter-item__header
+                span.filter-item__title
+                    | Цена за шт.
+            .filter-item__body
+                .filter-slider
+                    .filter-slider__values
+                        input.input-field.input-field--size-s.filter-slider__value.filter-slider__value--from
+                        .filter-slider__values-line
+                        input.input-field.input-field--size-s.filter-slider__value.filter-slider__value--to
+                    .filter-slider__line(data-range-type="price")
+
+        .filter-item
+            .filter-item__header
+                span.filter-item__title
+                    | Толщина металла
+            .filter-item__body
+                .filter-slider
+                    .filter-slider__values
+                        input.input-field.input-field--size-s.filter-slider__value.filter-slider__value--from
+                        .filter-slider__values-line
+                        input.input-field.input-field--size-s.filter-slider__value.filter-slider__value--to
+                    .filter-slider__line(data-range-type="mm")
+        .filter-item
+            .filter-item__header
+                span.filter-item__title
+                    | Материал
+            .filter-item__body
+        .filter-item
+            .filter-item__header
+                span.filter-item__title
+                    | Полимерное покрытие
+            .filter-item__body
+                ul.filter-list
+                    +checkboxLine('Цветное с одной стороны', 456)
+                    +checkboxLine('Цветное с двух сторон', 456)
+                    +checkboxLine('Printech с рисунком под дерево', 456)
+                    +checkboxLine('Printech с рисунком под кирпич', 456)
+                    +checkboxLine('Printech с рисунком под камень', 456)
+                    +checkboxLine('Цветное с одной стороны', 456)
+        .filter-item
+            .filter-item__header
+                span.filter-item__title
+                    | Цвет
+            .filter-item__body
+                ul.filter-list
+                    +checkboxLine('Зеленый', 456, '#417505')
+                    +checkboxLine('Коричневый', 456, '#8b572a')
+                    +checkboxLine('Красное вино', 456, '#ae0707')
+                    +checkboxLine('Красный', 456, '#ff4d63')
+                    +checkboxLine('Серый', 456, '#dedede')
+                    +checkboxLine('Черный', 456, '#000000')
+                a(href='#popup-colors-catalog').filter__link.js-popup-link
+                    | Выбрать в каталоге
+                    span.count-text
+                        | 473
+        .filter-item
+            .filter-item__header
+                span.filter-item__title
+                    | Коллекция
+            .filter-item__body
+                ul.filter-list
+                    +checkboxLine('Времена года', 456)
+                    +checkboxLine('Времена года', 456)
+                    +checkboxLine('Времена года', 456)
+                    +checkboxLine('Времена года', 456)
+                    +checkboxLine('Времена года', 456)
+                    +checkboxLine('Времена года', 456)
+                .filter__toggle
+                    span.filter__toggle-text Показать еще
+        .filter-item
+            .filter-item__header
+                span.filter-item__title
+                    | Спецпредложения
+            .filter-item__body
+                ul.filter-list
+                    +checkboxLine('Краска в подарок', 456)
+    .filter__footer
+        button.btn
+            span Показать
+            span.count-text
+                | 987
+        span.filter__clear Очистить

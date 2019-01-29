@@ -1,12 +1,19 @@
 {
-  "name": "gulp4template-pug-sass",
+  "name": "Materials",
   "version": "1.0.0",
-  "description": "Start template for gulp build system.",
+  "description": "",
   "main": "index.js",
   "dependencies": {
+    "jquery-validation": "^1.19.0",
+    "jquery.maskedinput": "^1.4.1",
+    "magnific-popup": "^1.1.0",
     "normalize.css": "^8.0.1",
-    "npm": "^6.4.1",
-    "svg4everybody": "^2.1.9"
+    "nouislider": "^12.1.0",
+    "npm": "^6.5.0",
+    "simplebar": "^3.1.1",
+    "slick-carousel": "^1.8.1",
+    "svg4everybody": "^2.1.9",
+    "wnumb": "^1.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.1.6",
@@ -42,10 +49,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nilyukov/gulp4template-pug-sass.git"
-  },
+  "repository": "git+https://github.com/nilyukov/gulp4template-pug-sass.git",
   "author": "nilyukov",
   "license": "ISC",
   "bugs": {

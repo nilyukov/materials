@@ -1,0 +1,407 @@
+extends template/main
+
+block variables
+    - var title = 'Cтраница категории'
+    - var pageClass = 'categories-page'
+
+block content
+    section.s-breadcrumbs
+        .container
+            ul.breadcrumbs
+                li.breadcrumbs__item
+                    a(href='#').breadcrumbs__home
+                        +icon('home','breadcrumbs__icon')
+                li.breadcrumbs__item
+                    span.breadcrumbs__label.breadcrumbs-nav__toggle
+                        | Каталог
+                    ul.breadcrumbs-nav
+                        li.breadcrumbs-nav__item
+                            a(href='#').breadcrumbs-nav__link
+                                span.breadcrumbs-nav__text Рулонная сталь
+                                span.count-text 23
+                        li.breadcrumbs-nav__item
+                            a(href='#').breadcrumbs-nav__link
+                                span.breadcrumbs-nav__text Профнастил
+                                span.count-text 23
+                        li.breadcrumbs-nav__item
+                            a(href='#').breadcrumbs-nav__link
+                                span.breadcrumbs-nav__text Листовой прокат
+                                span.count-text 23
+                        li.breadcrumbs-nav__item
+                            a(href='#').breadcrumbs-nav__link
+                                span.breadcrumbs-nav__text Фасад
+                                span.count-text 23
+                        li.breadcrumbs-nav__item
+                            a(href='#').breadcrumbs-nav__link
+                                span.breadcrumbs-nav__text Распродажа
+                                span.count-text 23
+                        li.breadcrumbs-nav__item
+                            a(href='#').breadcrumbs-nav__link
+                                span.breadcrumbs-nav__text Специальные предложения
+                                span.count-text 23
+                li.breadcrumbs__item
+                    span.breadcrumbs__current
+                        | Всё для кровли
+
+
+
+    section.s-categories
+        .container
+            .section-header
+                h1.title-page
+                    | Всё для кровли
+                    span.count-text
+                        | 8341
+            .categories
+                .category-list__wrapper
+                    a(href='#').category-list__title
+                        span.category-list__title-text
+                            | Прямоугольный водосток
+                        span.count-text
+                            | 9
+                    ul.category-list
+                        li.category-list__item
+                            a(href="#").link
+                                | Прямоугольные оцинкованные трубы водостока
+                            span.count-text
+                                | 23
+                        li.category-list__item
+                            a(href="#").link
+                                | Соединители прямоугольных желобов водостока
+                            span.count-text
+                                | 98
+                        li.category-list__item
+                            a(href="#").link
+                                | Воронка водостока прямоугольная оцинкованная
+                            span.count-text
+                                | 98
+                        li.category-list__item
+                            a(href="#").link
+                                | Заглушки прямоугольного водостока оцинкованные
+                            span.count-text
+                                | 98
+                        li.category-list__item
+                            a(href="#").link
+                                | Крепление прямоугольного водостока
+                            span.count-text
+                                | 7
+                .category-list__wrapper
+                    a(href='#').category-list__title
+                        span.category-list__title-text
+                            | Изоляция для кровли
+                        span.count-text
+                            | 9
+                    ul.category-list
+                        li.category-list__item
+                            a(href="#").link
+                                | Вертоизоляция
+                            span.count-text
+                                | 23
+                        li.category-list__item
+                            a(href="#").link
+                                | Влагоизоляция
+                            span.count-text
+                                | 98
+                        li.category-list__item
+                            a(href="#").link
+                                | Пароизоляция
+                            span.count-text
+                                | 98
+                        li.category-list__item
+                            a(href="#").link
+                                | Гидроизоляция
+                            span.count-text
+                                | 98
+                        li.category-list__item
+                            a(href="#").link
+                                | Утеплитель
+                            span.count-text
+                                | 7
+                        li.category-list__item
+                            a(href="#").link
+                                | Минеральная вата
+                            span.count-text
+                                | 7
+                .category-list__wrapper
+                    a(href='#').category-list__title
+                        span.category-list__title-text
+                            | Элементы безопасной кровли
+                        span.count-text
+                            | 9
+                .category-list__wrapper
+                    a(href='#').category-list__title
+                        span.category-list__title-text
+                            | Доборные элементы кровли
+                        span.count-text
+                            | 9
+                    ul.category-list
+                        li.category-list__item
+                            a(href="#").link
+                                | Планка стыковочная
+                            span.count-text
+                                | 23
+                        li.category-list__item
+                            a(href="#").link
+                                | Планка ендовы нижняя
+                            span.count-text
+                                | 98
+                        li.category-list__item
+                            a(href="#").link
+                                | Планка ендовы верхняя (разжелобок)
+                            span.count-text
+                                | 98
+                        li.category-list__item
+                            a(href="#").link
+                                | Планка угла наружного
+                            span.count-text
+                                | 98
+                        li.category-list__item
+                            a(href="#").link
+                                | Планка угла внутреннего
+                            span.count-text
+                                | 7
+                        li.category-list__item
+                            a(href="#").link
+                                | Планка карнизная
+                            span.count-text
+                                | 7
+                        li.category-list__item
+                            a(href="#").link
+                                | Планка карнизного свеса (капельник)
+                            span.count-text
+                                | 7
+                        li.category-list__item
+                            a(href="#").link
+                                | Планка торцевая
+                            span.count-text
+                                | 7
+                        li.category-list__item
+                            a(href="#").link
+                                | Планка примыкания верхняя
+                            span.count-text
+                                | 7
+                        li.category-list__item
+                            a(href="#").link
+                                | Планка примыкания нижняя
+                            span.count-text
+                                | 7
+                        li.category-list__item
+                            a(href="#").link
+                                | Планка конька плоского
+                            span.count-text
+                                | 7
+                        li.category-prev__item
+                            a(href="#").link
+                                | Конек круглый
+                            span.count-text
+                                | 7
+                        li.category-list__item
+                            a(href="#").link
+                                | Заглушка конька круглого простая
+                            span.count-text
+                                | 7
+                        li.category-list__item
+                            a(href="#").link
+                                | Заглушка конька круглого конусная
+                            span.count-text
+                                | 7
+                        li.category-list__item
+                            a(href="#").link
+                                | Снегозадержатель коньковый
+                            span.count-text
+                                | 7
+                        li.category-list__item
+                            a(href="#").link
+                                | Планка снегозадержателя усиливающая
+                            span.count-text
+                                | 7
+                .category-list__wrapper
+                    a(href='#').category-list__title
+                        span.category-list__title-text
+                            | Кляммеры
+                        span.count-text
+                            | 9
+                .category-list__wrapper
+                    a(href='#').category-list__title
+                        span.category-list__title-text
+                            | Комплекты водосточных систем
+                        span.count-text
+                            | 9
+                    ul.category-list
+                        li.category-list__item
+                            a(href="#").link
+                                | Водосточные трубы
+                            span.count-text
+                                | 23
+                        li.category-list__item
+                            a(href="#").link
+                                | Желоб водосточный
+                            span.count-text
+                                | 98
+                        li.category-list__item
+                            a(href="#").link
+                                | Воронка желоба выпускная (накладная, врезная)
+                            span.count-text
+                                | 98
+                        li.category-list__item
+                            a(href="#").link
+                                | Воронка водосборная круглая
+                            span.count-text
+                                | 98
+                        li.category-list__item
+                            a(href="#").link
+                                | Воронка водосборная конусная
+                            span.count-text
+                                | 7
+                        li.category-list__item
+                            a(href="#").link
+                                | Желоб с выходом (канадка)
+                            span.count-text
+                                | 7
+                        li.category-list__item
+                            a(href="#").link
+                                | Угол желоба 135 гр.
+                            span.count-text
+                                | 7
+                        li.category-list__item
+                            a(href="#").link
+                                | Угол желоба 90 грю
+                            span.count-text
+                                | 7
+                        li.category-prev__item
+                            a(href="#").link
+                                | Отмет трубы водостока
+                            span.count-text
+                                | 7
+                        li.category-list__item
+                            a(href="#").link
+                                | Колено трубы водостока
+                            span.count-text
+                                | 7
+                        li.category-list__item
+                            a(href="#").link
+                                | Тройник трубы водостока
+                            span.count-text
+                                | 7
+                        li.category-list__item
+                            a(href="#").link
+                                | Крепление желоба
+                            span.count-text
+                                | 7
+                        li.category-list__item
+                            a(href="#").link
+                                | Крепление трубы водостока анкерное
+                            span.count-text
+                                | 7
+                        li.category-list__item
+                            a(href="#").link
+                                | Крепление трубы водостока сварное
+                            span.count-text
+                                | 7
+                        li.category-list__item
+                            a(href="#").link
+                                | Трубка водостока промежуточная
+                            span.count-text
+                                | 7
+
+                .category-list__wrapper
+                    a(href='#').category-list__title
+                        span.category-list__title-text
+                            | Фальцевые картины
+                        span.count-text
+                            | 9
+                    ul.category-list
+                        li.category-list__item
+                            a(href="#").link
+                                | Самозащелкивающийся фальц (кликфальц)
+                            span.count-text
+                                | 23
+                .category-list__wrapper
+                    a(href='#').category-list__title
+                        span.category-list__title-text
+                            | Снегозадержатели
+                        span.count-text
+                            | 9
+                    ul.category-list
+                        li.category-list__item
+                            a(href="#").link
+                                | Снегозадержатели для металлочерепицы
+                            span.count-text
+                                | 23
+                        li.category-list__item
+                            a(href="#").link
+                                | Снегозадержатели для профнастила
+                            span.count-text
+                                | 23
+                        li.category-list__item
+                            a(href="#").link
+                                | Снегозадержатели для фальцевой кровли
+                            span.count-text
+                                | 23
+                        li.category-list__item
+                            a(href="#").link
+                                | Снегозадержатели для черепицы
+                            span.count-text
+                                | 23
+                        li.category-list__item
+                            a(href="#").link
+                                | Универсальные снегозадержатели
+                            span.count-text
+                                | 23
+                        li.category-list__item
+                            a(href="#").link
+                                | Снегозадержатели трубчатые
+                            span.count-text
+                                | 23
+                .category-list__wrapper
+                    a(href='#').category-list__title
+                        span.category-list__title-text
+                            | Металлочерепица
+                        span.count-text
+                            | 9
+                    ul.category-list
+                        li.category-list__item
+                            a(href="#").link
+                                | Квинта
+                            span.count-text
+                                | 23
+                        li.category-list__item
+                            a(href="#").link
+                                | Venevsky
+                            span.count-text
+                                | 98
+                        li.category-list__item
+                            a(href="#").link
+                                | Kredo
+                            span.count-text
+                                | 98
+                .category-list__wrapper
+                    a(href='#').category-list__title
+                        span.category-list__title-text
+                            | Софиты
+                        span.count-text
+                            | 9
+    include pages/catalog/catalog-mobile-nav
+    section.s-categories-prev
+        .container
+            .section-header
+                h2.title-section
+                    | Другие разделы каталога
+            .categories-prev
+                .categories-prev__navigation
+                    .slider-nav.slider-nav--prev.categories-prev__btn--prev
+                        +icon('left-chevron', 'slider-nav__icon')
+                    .slider-nav.slider-nav--next.categories-prev__btn--next
+                        +icon('right-chevron', 'slider-nav__icon')
+                .js-categories-prev
+                    include modules/category/prev-1
+                    include modules/category/prev-2
+                    include modules/category/prev-3
+                    include modules/category/prev-4
+                    include modules/category/prev-5
+                    include modules/category/prev-6
+    include pages/category/leaders
+    include modules/products/you-see
+    include modules/questions
+    block script
+        script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")

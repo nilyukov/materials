@@ -1,0 +1,132 @@
+mixin popColorCheckbox(text, color)
+    li.colors-catalog-list__item
+        label.checkbox.checkbox--bold
+            input(type="checkbox").checkbox__input
+            span.checkbox__custom
+            .checkbox__body
+                span.checkbox__text=text
+                .color-block.color-block--big(style="background-color: " + color + "")
+                    .colors-catalog-tooltip
+                        span.colors-catalog-tooltip__name=text
+                        span.colors-catalog-tooltip__description
+                            | Зеленый мох
+                        .color-block.color-block--xxl(style="background-color: " + color + "")
+
+.popup.popup--big.mfp-hide#popup-colors-catalog
+    .popup__header
+        span.popup__title
+            | Каталог цветов
+        .popup__close
+            +icon('close', 'popup__close-icon')
+    .popup__body
+        .colors-catalog
+            .colors-catalog__block
+                .colors-catalog__item
+                    .colors-catalog__input
+                        input(type="text" placeholder="Введите код цвета RAL").input-field.input-field--size-s.input-field--width--s
+                .colors-catalog__item
+                    label.checkbox.checkbox--bold
+                        input(type="checkbox").checkbox__input
+                        span.checkbox__custom
+                        .checkbox__body
+                            span.checkbox__text
+                                | Выбрать все 213 цветов
+            .colors-catalog__block
+                .colors-catalog__item
+                    label.checkbox.checkbox--big
+                        input(type="checkbox").checkbox__input
+                        span.checkbox__custom
+                        .checkbox__body
+                            span.checkbox__text
+                                | Каталог цветов RAL
+                .colors-catalog__item
+                    .colors-catalog__title
+                        label.checkbox.checkbox--bold
+                            input(type="checkbox").checkbox__input
+                            span.checkbox__custom
+                            .checkbox__body
+                                span.checkbox__text
+                                    | Все оттенки зеленого
+                    ul.colors-catalog-list
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+
+                .colors-catalog__item
+                    .colors-catalog__title
+                        label.checkbox.checkbox--bold
+                            input(type="checkbox").checkbox__input
+                            span.checkbox__custom
+                            .checkbox__body
+                                span.checkbox__text
+                                    | Все оттенки зеленого
+                    ul.colors-catalog-list
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+                        +popColorCheckbox('RAL 1000','green')
+
+    .colors-catalog__footer
+        span.colors-catalog__count
+            | Выбрано <b>30</b> цветов
+        button.btn
+            | Добавить в фильтр
